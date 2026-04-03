@@ -1,0 +1,52 @@
+*{
+    margin: 0px;
+    border: 0px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    text-align: justify;
+    
+}
+
+i {
+    color: #0000FF;
+}
+
+strong {
+    color: #808080
+}
+h1,h2 {
+    color: #363636;
+}
+
+#logo {
+    text-align: center;
+    background-color: #808080;
+}
+.rodape {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    background-color: #808080;
+}
+#nome {
+    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    color: #1127a5;
+
+}
+button {
+    border: 10px;
+    border-style: groove;
+    background-color: #4a4444;
+    color: #fff;
+    padding: 10px;
+    font-weight: center;
+}
+.centralizar {
+    text-align: center ;
+}

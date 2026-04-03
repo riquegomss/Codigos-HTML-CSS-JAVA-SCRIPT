@@ -1,0 +1,125 @@
+<!-- 
+Aluno: 
+Henrique Gomes Soares
+matricula: 291087668
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+        var matricula = prompt("informe a matricula: ")
+        var nome = prompt("informe o nome: ")
+        var sobrenome = prompt("informe o sobrenome: ")
+
+        function mostrarMensagem() {
+        // Lógica para Data em Tempo Real
+        var dataAtual = new Date();
+        var dia = String(dataAtual.getDate()).padStart(2, '0');
+        var mes = String(dataAtual.getMonth() + 1).padStart(2, '0'); // Janeiro é 0
+        var ano = dataAtual.getFullYear();
+        var dataFormatada = dia + "/" + mes + "/" + ano;
+
+        var tracejado = "----------------------------------------------------------";
+        
+        var dados = 
+            "MENSAGEM DO SITE:\n" +
+            tracejado + "\n" +
+            "Nome da Página..: index.html\n" +
+            "Programador: Fulano Silva\n" +
+            "Designer: Sicrano Alves\n" +
+            "Copywriter: Beltrano Zanábio\n" +
+            "Data....: " + dataFormatada + "\n" + // <--- DATA EM TEMPO REAL AQUI
+            "Versão..: 1.0\n" +
+            tracejado + "\n" +
+            "Dados do Usuário:\n" +
+            "Matrícula: ( " + matricula + " ). Nome completo: " + nome + " " + sobrenome + "\n" +
+            tracejado;
+            alert(dados);
+        }
+
+    </script>
+    <style>
+        body {
+            background-color: RoyalBlue;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+        }
+        #info {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: gray;
+            padding: 10px;
+            width: 80%;
+        }
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+        footer{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: gray;
+            padding: 10px;
+            width: 80%;
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <h1>JAVA SCRIPT</h1>
+
+    <div id="info">
+    </div>
+    <script>
+        document.getElementById("info").innerHTML = "Matricula: " + matricula + " / Nome Completo: " + nome + " " + sobrenome;
+    </script>
+
+    <p>JavaScript é uma linguagem de programação de alto nível, criada em 1995 por Brendan Eich, um funcionário da
+    Netscape, empresa que criou um dos primeiros navegadores da web. É uma linguagem interpretada e baseada em eventos,
+    amplamente usada para desenvolvimento web. Inicialmente criada para tornar páginas da web interativas e para fazer
+    validações no lado cliente (front-end). Atualmente é usada em diversas áreas, incluindo servidores, aplicativos
+    móveis, jogos e até inteligência artificial.</p>
+
+    <h2>CARACTERÍSTICAS</h2>
+
+    <p>São caracaterística dessa linguagem: multiparadigma, pois suporta programação funcional, orientada a objetos e
+    baseada em eventos; interpretada, o código JavaScript é executado diretamente pelo navegador (o runtime), ou por um
+    ambiente como o Node.js, sem necessidade de compilação. dinamicamente tipada, as variáveis podem armazenar
+    diferentes tipos de dados sem necessidade de declaração explícita e juntamente com HTML e CSS, é uma das principais
+    tecnologias da web.</p>
+
+    <h2>VERSÕES</h2>
+
+    <p>O JavaScript está em evolução, sua última versão é o ECMAScript 13 (ES13) de 2022, nessa versão aconteceram
+    melhorias no acesso a índices de arrays e alterações relaionadas ao Node.js. A versão ECMAScript 3 de 1999, trouxe
+    suporte a tratamento de erros (try/catch) e manipulação de strings, a versão de ECMAScript 5 (ES5) de 2009
+    deu suporte para JSON nativo, introdução dos métodos como forEach(), map(), filter(), reduce() e melhorias de
+    segurança e desempenho. Houve uma grande atualização em 2015, o ECMAScript 6, nessa versão foram introduzidos o
+    comando let e const para declarar variáveis, classes e módulos (import/export) para organização do código, entre
+    outras. Muitas versões vieram depois, como:ECMAScript 7 em 2016, ECMAScript 8 em 2017, ECMAScript 9 em 2018,
+    ECMAScript 10 em 2019, ECMAScript 11 em 2020 e ECMAScript 12 em 2021.</p>
+
+    <button onclick="mostrarMensagem()">
+        Sobre a pagina
+    </button>
+<br><br>
+    <footer id="rodape">
+        Para mais infomações acesse: <a href="https://www.w3schools.com/js/"> JavaScript tutorial</a>
+    </footer>
+</body>
+
+<p>
+Aluno: 
+Henrique Gomes Soares
+matricula: 291087668
+</p>
+
+</html>
