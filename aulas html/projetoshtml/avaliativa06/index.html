@@ -1,0 +1,144 @@
+<!-- 
+ Aluno: Henrique Gomes Soares
+ Matricula: 291087668
+  -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background: white;
+        }
+
+        .container{
+            width: 600px;
+            margin: 20px auto;
+            padding: 35px;
+
+            border: 5px solid black;
+            border-radius: 30px;
+
+            background: #efefef;
+
+            box-shadow: 8px 8px 20px rgba(0,0,0,0.5);
+        }
+
+        h1{
+            font-size: 55px;
+            margin-bottom: 40px;
+        }
+
+        p{
+            font-size: 25px;
+        }
+
+        input{
+            width: 250px;
+            height: 30px;
+            font-size: 25px;
+        }
+
+        button{
+            padding: 8px 12px;
+            font-size: 20px;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+
+        #resultado{
+            margin-top: 30px;
+            font-size: 30px;
+        }
+
+        b{
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Calculadora</h1>
+
+        <p>
+            Valor A:
+            <input type="number" id="a">
+        </p>
+
+        <p>
+            Valor B:
+            <input type="number" id="b">
+        </p>
+
+        <button onclick="somar()">Somar</button>
+
+        <button onclick="subtrair()">Subtrair</button>
+
+        <button onclick="multiplicar()">Multiplicar</button>
+
+        <button onclick="dividir()">Dividir</button>
+
+        <button onclick="fechar()">Fechar</button>
+
+        <div id="resultado">
+            <b>Resultado:</b>
+        </div>
+
+    </div>
+
+    <script>
+
+        function pegarValores(){
+            let a = parseFloat(document.getElementById("a").value);
+            let b = parseFloat(document.getElementById("b").value);
+
+            if(isNaN(a) || isNaN(b)){
+                alert("Digite os valores!");
+                throw new Error("Valores inválidos");
+            }
+
+            return {a,b};
+        }
+
+        function mostrar(valor){
+            document.getElementById("resultado").innerHTML =
+            "<b>Resultado:</b> " + valor;
+        }
+
+        function somar(){
+            let valores = pegarValores();
+            mostrar(valores.a + valores.b);
+        }
+
+        function subtrair(){
+            let valores = pegarValores();
+            mostrar(valores.a - valores.b);
+        }
+
+        function multiplicar(){
+            let valores = pegarValores();
+            mostrar(valores.a * valores.b);
+        }
+
+        function dividir(){
+            let valores = pegarValores();
+            mostrar((valores.a / valores.b).toFixed(3));
+        }
+
+        function fechar(){
+            window.close();
+        }
+
+    </script>
+</body>
+<p> Aluno: Henrique Gomes Soares
+ Matricula: 291087668
+</p>
+</html>
