@@ -1,0 +1,207 @@
+<!-- 
+ Aluno: Henrique Gomes Soares
+ Matricula: 291087668
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma e Média</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            margin: 30px;
+        }
+
+        div{
+            margin-bottom: 15px;
+        }
+
+        label{
+            display: inline-block;
+            width: 100px;
+        }
+
+        input{
+            width: 180px;
+            height: 25px;
+        }
+
+        button{
+            margin-right: 10px;
+            height: 30px;
+        }
+
+        .resultado{
+            margin-top: 20px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h2>Soma e Média</h2>
+
+    <div>
+        <label for="valorA">Valor para A:</label>
+        <input type="number" id="valorA" value="29">
+    </div>
+
+    <div>
+        <label for="valorB">Valor para B:</label>
+        <input type="number" id="valorB" value="7">
+    </div>
+
+    <div>
+        <label for="valorC">Valor para C:</label>
+        <input type="number" id="valorC" value="34">
+    </div>
+
+    <div>
+        <label for="valorD">Valor para D:</label>
+        <input type="number" id="valorD" value="1">
+    </div>
+
+    <br>
+
+    <button id="btnsoma">Soma</button>
+    <button id="btnmedia">Média</button>
+    <button id="btnmaior">Maior</button>
+    <button id="btnmenor">Menor</button>
+    <button id="btnfechar">Fechar</button>
+
+    <div class="resultado" id="resultadoSoma"></div>
+    <div class="resultado" id="resultadoMedia"></div>
+    <div class="resultado" id="resultadoMaior"></div>
+    <div class="resultado" id="resultadoMenor"></div>
+
+    <br><br>
+
+    <p>
+        Aluno: Henrique Gomes Soares<br>
+        Matrícula: 291087668
+    </p>
+
+    <script>
+
+        // REFERÊNCIA DOS BOTÕES
+
+        let calcularSoma = document.getElementById("btnsoma");
+        let calcularMedia = document.getElementById("btnmedia");
+        let calcularMaior = document.getElementById("btnmaior");
+        let calcularMenor = document.getElementById("btnmenor");
+        let fechar = document.getElementById("btnfechar");
+
+
+        // BOTÃO SOMA
+
+        calcularSoma.addEventListener("click", function () {
+
+            let a = Number(document.getElementById("valorA").value);
+            let b = Number(document.getElementById("valorB").value);
+            let c = Number(document.getElementById("valorC").value);
+            let d = Number(document.getElementById("valorD").value);
+
+            let soma = a + b + c + d;
+
+            document.getElementById("resultadoSoma").textContent =
+                "A soma é: " + soma;
+
+        });
+
+
+        // BOTÃO MÉDIA
+
+        calcularMedia.addEventListener("click", function () {
+
+            let a = Number(document.getElementById("valorA").value);
+            let b = Number(document.getElementById("valorB").value);
+            let c = Number(document.getElementById("valorC").value);
+            let d = Number(document.getElementById("valorD").value);
+
+            let media = (a + b + c + d) / 4;
+
+            document.getElementById("resultadoMedia").textContent =
+                "A média é: " + media;
+
+        });
+
+
+        // BOTÃO MAIOR
+
+        calcularMaior.addEventListener("click", function () {
+
+            let a = Number(document.getElementById("valorA").value);
+            let b = Number(document.getElementById("valorB").value);
+            let c = Number(document.getElementById("valorC").value);
+            let d = Number(document.getElementById("valorD").value);
+
+            let maior = a;
+
+            if (b > maior) {
+                maior = b;
+            }
+
+            if (c > maior) {
+                maior = c;
+            }
+
+            if (d > maior) {
+                maior = d;
+            }
+
+            document.getElementById("resultadoMaior").textContent =
+                "O maior valor é: " + maior;
+
+        });
+
+
+        // BOTÃO MENOR
+
+        calcularMenor.addEventListener("click", function () {
+
+            let a = Number(document.getElementById("valorA").value);
+            let b = Number(document.getElementById("valorB").value);
+            let c = Number(document.getElementById("valorC").value);
+            let d = Number(document.getElementById("valorD").value);
+
+            let menor = a;
+
+            if (b < menor) {
+                menor = b;
+            }
+
+            if (c < menor) {
+                menor = c;
+            }
+
+            if (d < menor) {
+                menor = d;
+            }
+
+            document.getElementById("resultadoMenor").textContent =
+                "O menor valor é: " + menor;
+
+        });
+
+
+        // BOTÃO FECHAR
+
+        fechar.addEventListener("click", function () {
+
+            window.close();
+
+        });
+
+    </script>
+
+</body>
+
+</html>
